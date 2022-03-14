@@ -23,6 +23,11 @@ public class Room {
     this.name = name;
     this.description = description;
   }
+
+  public String toString(){
+    return name;
+  }
+
   public void setDescription(String input){
     description = input;
   }
