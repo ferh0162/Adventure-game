@@ -99,7 +99,6 @@ public class Adventure {
             currentRoom = currentRoom.getWest();
           }
         }
-
         case "go south" -> {
           if (currentRoom.getSouth() == null) {
             System.out.println("You can't go this way");
@@ -107,7 +106,6 @@ public class Adventure {
             currentRoom = currentRoom.getSouth();
           }
         }
-
         case "look" -> {
           currentRoom.getDescription();
         }
@@ -115,7 +113,6 @@ public class Adventure {
           getHelpMenu();
         }
         case "exit" -> running = false;
-
       }
 
     }
