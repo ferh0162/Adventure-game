@@ -18,6 +18,7 @@ public class Room {
     this.south = south;
     this.west = west;
   }
+
   public Room(String name, String description) {
 
     this.name = name;

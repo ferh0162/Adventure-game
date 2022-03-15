@@ -48,19 +48,13 @@ public class Adventure {
 
     //ROOM 8
     room8.setNorth(room5);
-    room8.setEast(room7);
-    room8.setWest(room9);
+    room8.setWest(room7);
+    room8.setEast(room9);
 
     //ROOM 9
     room9.setNorth(room6);
     room9.setWest(room8);
   }
-
-  //INITIALIZE ROOMS
-
-
-  //CONNECT ROOMS
-
 
   public void execute() {
     createRooms();
@@ -74,10 +68,8 @@ public class Adventure {
 
       String userIn = sc.nextLine();
 
-
       switch (userIn) {
         case "go east" -> {
-
           if (currentRoom.getEast() == null) {
             System.out.println("You can't go this way");
           } else {
@@ -85,7 +77,6 @@ public class Adventure {
           }
         }
         case "go north" -> {
-
           if (currentRoom.getNorth() == null) {
             System.out.println("You can't go this way");
           } else {
@@ -99,7 +90,6 @@ public class Adventure {
             currentRoom = currentRoom.getWest();
           }
         }
-
         case "go south" -> {
           if (currentRoom.getSouth() == null) {
             System.out.println("You can't go this way");
@@ -107,7 +97,6 @@ public class Adventure {
             currentRoom = currentRoom.getSouth();
           }
         }
-
         case "look" -> {
           currentRoom.getDescription();
         }
@@ -115,12 +104,8 @@ public class Adventure {
           getHelpMenu();
         }
         case "exit" -> running = false;
-
       }
-
     }
-
-
   }
 
   public void presentGame() {
