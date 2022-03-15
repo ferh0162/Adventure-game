@@ -48,8 +48,8 @@ public class Adventure {
 
     //ROOM 8
     room8.setNorth(room5);
-    room8.setEast(room7);
-    room8.setWest(room9);
+    room8.setWest(room7);
+    room8.setEast(room9);
 
     //ROOM 9
     room9.setNorth(room6);
