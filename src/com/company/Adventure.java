@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Adventure {
   //DECLARE VARIABLES
+  
+                              //OPRETTER RUM 
   Scanner sc = new Scanner(System.in);
 
   Room room1 = new Room("Room: 1", "");
@@ -19,6 +21,9 @@ public class Adventure {
   Room currentRoom = room1;
 
   public void createRooms() {
+    
+                              //GIVER RUMMENE FORBINDELSE TIL HINANDEN
+    
     //ROOM 1
     room1.setEast(room2);
     room1.setSouth(room4);
@@ -57,6 +62,7 @@ public class Adventure {
   }
 
   public void execute() {
+                                //MAIN MENU
     createRooms();
     presentGame();
 
@@ -67,10 +73,12 @@ public class Adventure {
       System.out.println(currentRoom);
 
       String userIn = sc.nextLine();
-
+      
+                              //OPRETTER BRUGER VALGMULIGHEDER
       switch (userIn) {
         case "go east" -> {
           if (currentRoom.getEast() == null) {
+                                 //GENTAGER DENNE KODEN HVER GANG
             System.out.println("You can't go this way");
           } else {
             currentRoom = currentRoom.getEast();
@@ -107,14 +115,14 @@ public class Adventure {
       }
     }
   }
-
+                              //WELCOME MESSAGE
   public void presentGame() {
     System.out.println("""
         WELCOME TO <placeholder>
         You can always write 'help' to see a list of commands
         """);
   }
-
+                              //HELP MENU
   public void getHelpMenu() {
     System.out.println("""
         ---------HELP MENU---------
@@ -125,7 +133,7 @@ public class Adventure {
         """);
   }
 
-
+                            //????
   public String getParameter(String input) {
     int firstSpace = input.indexOf(" ");
     return input.substring(firstSpace + 1);
